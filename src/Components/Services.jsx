@@ -9,7 +9,7 @@ const Services = () => {
             <img src={theme_pattern} alt="theme" className="absolute h-14 top-3 left-[10.8rem] -z-10 max-md:h-10 max-md:left-28"/>
         </div>
 
-        <div className="grid grid-cols-3 gap-6 px-5 max-md:grid-cols-2 max-md:p-0">
+        <div className="grid grid-cols-3 gap-6 px-5 max-md:grid-cols-1 max-md:p-0">
         {Services_Data.map((service, index) => {
           return (
             <div key={index} className="flex justify-center flex-col gap-4 p-6 rounded-lg border-2 border-white cursor-pointer hover:border-fuchsia-500 hover:bg-custom-gradient-card-hover hover:transform transition-transform duration-300 hover:scale-105">
