@@ -5,8 +5,8 @@ const Services = () => {
   return (
     <div id="services" className="flex flex-col items-center justify-center gap-20 mx-28 my-28 max-md:items-start max-md:mx-10 max-md:-mt-10">
         <div className="relative">
-            <h1 className="text-6xl font-semibold text-center max-md:text-5xl">My Services</h1>
-            <img src={theme_pattern} alt="theme" className="absolute h-14 top-3 left-[10.8rem] -z-10 max-md:h-10 max-md:left-44"/>
+            <h1 className="text-6xl font-semibold text-center max-md:text-[2.5rem]">My Services</h1>
+            <img src={theme_pattern} alt="theme" className="absolute h-14 top-3 left-[10.8rem] -z-10 max-md:h-10 max-md:left-28"/>
         </div>
 
         <div className="grid grid-cols-3 gap-6 px-5 max-md:grid-cols-2 max-md:p-0">

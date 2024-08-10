@@ -4,8 +4,8 @@ const About = () => {
   return (
     <div id="about" className="flex flex-col items-center justify-center gap-20 mx-32 my-28 max-md:items-start max-md:mx-10">
         <div className="relative">
-            <h1 className="text-6xl font-semibold text-center max-md:text-5xl">About me</h1>
-            <img src={theme_pattern} alt="theme" className="absolute h-14 top-3 left-28 -z-10 max-md:h-10 max-md:left-32"/>
+            <h1 className="text-6xl font-semibold text-center max-md:text-[2.5rem]">About me</h1>
+            <img src={theme_pattern} alt="theme" className="absolute h-14 top-3 left-28 -z-10 max-md:h-10 max-md:left-20"/>
         </div>
         <div className="flex gap-16 max-md:flex-col">
           <div className="max-md:hidden">
