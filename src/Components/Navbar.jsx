@@ -22,7 +22,7 @@ const Navbar = () => {
         <img src={logo} alt="logo" />
         <img src={menu_open} alt="toggle_open" className="hidden max-md:block  max-md:fixed max-md:right-8" onClick={openMenu}/>
         <ul className='flex items-center list-none gap-14 text-lg max-md:fixed max-md:flex max-md:flex-col max-md:items-center max-md:gap-10 max-md:top-0 max-md:w-64 max-md:bg-[#1F0016] max-md:h-full max-md:z-30 max-md:-right-96 transition-all duration-500 ease-in' ref={menuRef}>
-          <img src={menu_close} alt="toggle_close" className="hidden max-md:relative max-md:block max-md:ml-60 max-md:mt-8 max-md:w-8" onClick={closeMenu}/>
+          <img src={menu_close} alt="toggle_close" className="hidden max-md:relative max-md:block max-md:ml-32 max-md:mt-8 max-md:w-8" onClick={closeMenu}/>
           <li className="cursor-pointer flex flex-col items-center gap-1 max-md:text-xl max-md:gap-5 max-md:flex-row">
             <AnchorLink className="text-white" offset={50}>
               <p onClick={() => setMenu("home")}>Home</p>
