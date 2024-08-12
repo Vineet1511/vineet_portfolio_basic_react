@@ -9,12 +9,12 @@ const Contact = () => {
         event.preventDefault();
         const formData = new FormData(event.target);
     
-        formData.append("access_key", "48a8dc4c-1974-4dc2-b010-92ef34941300");
+        formData.append("access_key", import.meta.env.VITE_API_KEY);
     
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
     
-        const res = await fetch("https://api.web3forms.com/submit", {
+        const res = await fetch(import.meta.env.VITE_API_URL, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -61,11 +61,15 @@ const Contact = () => {
 
             <form className="flex flex-col items-start gap-3 w-1/2 max-md:w-full" onSubmit={onSubmit}>
                 <label htmlFor="" className="text-slate-200 text-md font-medium">Your Name</label>
-                <input type="text" placeholder="Enter Your Name" name="name" className="border-none w-full h-16 pl-5 rounded-md bg-[#32323c] placeholder:opacity-60 placeholder:text-lg text-[#A0A0A0] max-md:w-[85vw]"/>
+                <input type="text" placeholder="Enter Your Name" name="name" className="border-none w-full h-16 pl-5 rounded-md bg-[#32323c] placeholder:opacity-60 placeholder:text-lg text-[#A0A0A0] max-md:w-[85vw]" required/>
+
                 <label className="text-slate-200 text-md font-medium">Your Email</label>
-                <input type="email" placeholder="Enter Your Email" name="email" className="border-none w-full h-16 pl-5 rounded-md bg-[#32323c] placeholder:opacity-60 placeholder:text-lg text-[#A0A0A0] max-md:w-[85vw]"/>
+                <input type="email" placeholder="Enter Your Email" name="email" className="border-none w-full h-16 pl-5 rounded-md bg-[#32323c] placeholder:opacity-60 placeholder:text-lg text-[#A0A0A0] max-md:w-[85vw]" required/>
+
                 <label htmlFor="" className="text-slate-200 text-md font-medium">Write Your Message </label>
-                <textarea name="message" rows="8" placeholder="Enter Your Message" className="border-none w-full pl-5 pt-5 rounded-md bg-[#32323c] placeholder:opacity-60 placeholder:text-lg text-[#A0A0A0]"></textarea>
+                <textarea name="message" rows="8" placeholder="Enter Your Message" className="border-none w-full pl-5 pt-5 rounded-md bg-[#32323c] placeholder:opacity-60 placeholder:text-lg text-[#A0A0A0]" required>
+                </textarea>
+                
                 <button type="submit" className="border-none text-white rounded-full bg-custom-gradient-card-submit px-9 py-3 cursor-pointer mt-4 text-lg font-medium transform transition-transform duration-300 ease-in hover:scale-110">Submit now</button>
             </form>
         </div>
